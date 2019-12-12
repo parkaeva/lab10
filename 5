@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float a, sum;
+    int n, k;
+    cin>>a>>n;
+    sum=1;
+    k=0;
+    while((k+1)!=n)
+    {
+        k+=1;
+        if(k%2!=0)
+        {
+            sum=sum+pow(a,k);
+        } else
+        {
+            sum=sum-pow(a,k+1);
+        }
+    }
+    cout<<sum;
+
+    return 0;
+}
